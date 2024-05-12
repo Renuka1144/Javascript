@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q.9 Javascript Assignment</title>
+</head>
+<body>
+    <script>
+// Function to calculate days left until next Christmas
+function daysUntilNextChristmas() {
+  // Get the current date
+  const today = new Date();
+
+  // Get the current year
+  const currentYear = today.getFullYear();
+
+  // Create a new Date object for next Christmas (December 25 of the current year)
+  const nextChristmas = new Date(currentYear, 11, 25); // Month is 11 (December is 0-based index)
+
+  // Check if Christmas for this year has already passed
+  if (today > nextChristmas) {
+    // If Christmas has passed for this year, calculate for the next year
+    nextChristmas.setFullYear(currentYear + 1);
+  }
+
+  // Calculate the difference in milliseconds between today and next Christmas
+  const differenceMs = nextChristmas - today;
+
+  // Convert the difference from milliseconds to days
+  const daysLeft = Math.ceil(differenceMs / (1000 * 60 * 60 * 24));
+
+  return daysLeft;
+}
+
+// Call the function to calculate days left until next Christmas
+const daysUntilChristmas = daysUntilNextChristmas();
+
+// Display the number of days left until next Christmas
+console.log(`Days left until next Christmas: ${daysUntilChristmas} days`);
+
+    </script>
+</body>
+</html>
