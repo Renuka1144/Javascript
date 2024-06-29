@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Operations</title>
+    <script type="text/javascript">
+        function calculate(operation) {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var result;
+
+            if (isNaN(num1) || isNaN(num2)) {
+                result = "Please enter valid numbers.";
+            } else {
+                switch(operation) {
+                    case '+':
+                        result = num1 + num2;
+                        break;
+                    case '-':
+                        result = num1 - num2;
+                        break;
+                    case '*':
+                        result = num1 * num2;
+                        break;
+                    case '/':
+                        result = num1 / num2;
+                        break;
+                    case '%':
+                        result = num1 % num2;
+                        break;
+                    default:
+                        result = "Invalid operation.";
+                }
+            }
+
+            document.getElementById('result').innerHTML = "Answer is: " + result;
+        }
+    </script>
+</head>
+<body>
+    <h1>Math Operations</h1>
+    <div>
+        <label for="num1">Enter 1st number: </label>
+        <input type="text" id="num1">
+    </div>
+    <div>
+        <label for="num2">Enter 2nd number: </label>
+        <input type="text" id="num2">
+    </div>
+    <div>
+        <button onclick="calculate('+')">+</button>
+        <button onclick="calculate('-')">-</button>
+        <button onclick="calculate('*')">*</button>
+        <button onclick="calculate('/')">/</button>
+        <button onclick="calculate('%')">%</button>
+    </div>
+    <div id="result">
+        Answer is: 
+    </div>
+</body>
+</html>

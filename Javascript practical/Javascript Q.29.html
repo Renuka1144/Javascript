@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q.29 Javascript Assignment</title>
+</head>
+<body>
+    <script>
+      // i
+
+      function getDayName(dayNumber) {
+  let dayName;
+
+  switch (dayNumber) {
+    case 1:
+      dayName = "Monday";
+      break;
+    case 2:
+      dayName = "Tuesday";
+      break;
+    case 3:
+      dayName = "Wednesday";
+      break;
+    case 4:
+      dayName = "Thursday";
+      break;
+    case 5:
+      dayName = "Friday";
+      break;
+    case 6:
+      dayName = "Saturday";
+      break;
+    case 7:
+      dayName = "Sunday";
+      break;
+    default:
+      dayName = "Invalid day number";
+      break;
+  }
+
+  return dayName;
+}
+
+// Example usage:
+const day = 3; // Assuming 3 corresponds to Wednesday
+const dayName = getDayName(day);
+console.log("i. " + `The day corresponding to ${day} is: ${dayName}`);
+
+// ii
+
+function checkVowelOrConsonant(char) {
+  let result;
+
+  switch (char.toLowerCase()) {
+    case 'a':
+    case 'e':
+    case 'i':
+    case 'o':
+    case 'u':
+      result = "Vowel";
+      break;
+    default:
+      result = "Consonant";
+      break;
+  }
+
+  return result;
+}
+
+// Example usage:
+const character = 'A'; // Assuming 'A' to check
+const charType = checkVowelOrConsonant(character);
+console.log("ii. " + `'${character}' is a ${charType}`);
+  
+    </script>
+    
+</body>
+</html>
