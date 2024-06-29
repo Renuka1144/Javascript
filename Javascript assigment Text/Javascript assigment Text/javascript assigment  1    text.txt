@@ -1,0 +1,872 @@
+                                                                         Javascript Assigment Text(basic And Dom)
+
+
+Q.1)  What is javascript?How to use it?
+Ans)JavaScript is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive
+        Where HTML and CSS are languages that give structure and style to web pages, JavaScript gives web pages interactive elements that engage a user.
+   
+Q.2)How many types of Variable in javascrips?
+Ans) There are two types of variables in JavaScript : local variable and global variable.
+
+        There are some rules while declaring a JavaScript variable (also known as identifiers).
+
+1.Name must start with a letter (a to z or A to Z), underscore( _ ), or dollar( $ ) sign.
+2.After first letter we can use digits (0 to 9), for example value1.
+3. JavaScript variables are case sensitive, for example x and X are different variables.
+
+Q.3)Define a Data Types in Js?
+Ans)JavaScript is a dynamically typed (also called loosely typed) scripting language. 
+
+        Eight data types Out of which seven data types are Primitive(predefined) and one complex or Non-Primitive.
+
+   Primitive Data Types:
+1)Number: JavaScript numbers are always stored in double-precision 64-bit binary format IEEE 754. Unlike other programming languages, you don’t need int, float, etc to declare different numeric values.
+                          let num = 2; // Integer 
+2)String: JavaScript Strings are similar to sentences. They are made up of a list of characters, which is essentially just an “array of characters, like “Hello GeeksforGeeks” etc.
+                                                   let str = "Hello There";
+3)Boolean: Represent a logical entity and can have two values: true or false.
+                                                        let isCoding = true; // yes
+                                                        let isOld = false;      // no
+4)Null: This type has only one value that is null.
+                                                          let age = null;
+5)Undefined: A variable that has not been assigned a value is undefined.
+                                   let x;
+                                   console.log(x);  // undefined
+6)Symbol: Symbols return unique identifiers that can be used to add unique property keys to an object that won’t collide with keys of any other code that might add to the object.
+7)BigInt: BigInt is a built-in object in JavaScript that provides a way to represent whole numbers larger than 253-1.
+Non-Primitive Data Types:
+Object:
+JavaScript objects are fundamental data structures used to store collections of data. They consist of key-value pairs and can be created using curly braces {} or the new keyword. Understanding objects is crucial, as everything in JavaScript is essentially an object.
+
+Q.4)Write a mul function which will work properly when invoked with following syntax?
+Ans)The MUL function is a miniature of the multiplication function. In this function, we call the function that required an argument as a first number, and that function calls another function that required another argument and this step goes on. 
+
+Q.5)What the deference beween Undefined and Undeclare in javascript?
+Ans)Difference between undeclared and undefined variables:
+
+                                                       Undeclared                                                                                                                                     Undefined
+
+1)These are the variable that do not exist in the memory heap.                        1)These variable are the ones thatdo exist in momory but nothing is being 
+                                                                                                                                                 assigned to them explicity by the programmer.
+
+2)The variable are considered to be undeclared because of                                  2)The variable are considered to be undefined because it is assigned by javascrip to them.
+
+    does not write them with var,let,const.
+3)if we try to access them in the code execution phase than javascript will      3)if we try access these variable we all get the undefinde as value.
+     throw a reference error.
+    
+
+Q.10)what is conditional statement?
+Ans)A conditional statement is characterized by the presence of “if” as an antecedent and “then” as a consequent. A conditional statement,
+        also known as an “if-then” statement consists of two parts:
+
+        The “if” clause (hypothesis): This part presents a condition, situation, or assertion. It is the initial condition that is being considered.
+         The “then” clause (conclusion): This part indicates the consequence, result, or action that will occur if the condition presented in the “if” clause
+          is true or satisfied. 
+
+Q.14)write a javascript exercise to get the extension of a filename?
+Ans)JavaScript programming topics:
+
+     .  JavaScript String split()
+     .  Javascript String substring()
+     .  JavaScript String lastIndexOf()
+Q.15)What is the result of the expression (5 > 3 && 2 < 4)?
+Ans)The result of the expression `(5 > 3 && 2 < 4)` can be evaluated as follows:
+
+1. `5 > 3` evaluates to `true` because `5` is indeed greater than `3`.
+2. `2 < 4` evaluates to `true` because `2` is less than `4`.
+
+Now, let's break down the entire expression `(5 > 3 && 2 < 4)`:
+
+- `5 > 3` is `true`.
+- `2 < 4` is `true`.
+
+In JavaScript, the `&&` (logical AND) operator returns `true` if both operands are `true`, otherwise it returns `false`.
+
+Therefore, when you evaluate `(5 > 3 && 2 < 4)`, you are essentially evaluating `true && true`, which results in `true`.
+
+Hence, the result of the expression `(5 > 3 && 2 < 4)` is `true`.
+
+Q.16) What is the result of the expression (true && 1 && "hello")?
+Ans)To evaluate the expression `(true && 1 && "hello")`, we need to understand how the logical AND (`&&`) operator works in JavaScript.
+
+The `&&` operator in JavaScript performs a logical AND operation between two operands. Here's how it behaves:
+
+1. If both operands are `true`, the `&&` operator returns the last operand.
+2. If any operand is `false`, the `&&` operator short-circuits and returns `false` without evaluating the remaining operands.
+
+Let's break down the expression `(true && 1 && "hello")`:
+
+1. `true` is a boolean value that evaluates to `true`.
+2. `1` is a truthy value (non-zero number), which also evaluates to `true`.
+3. `"hello"` is a non-empty string, which is considered a truthy value and evaluates to `true`.
+
+Now, evaluating the expression step by step:
+
+- `true && 1` evaluates to `1` (the last operand), because both `true` and `1` are truthy values.
+- `1 && "hello"` evaluates to `"hello"`, because both `1` (truthy) and `"hello"` (truthy) are true values.
+
+Therefore, the result of the expression `(true && 1 && "hello")` is `"hello"`. This is because the `&&` operator returns the last truthy 
+value among the operands, and `"hello"` is the last operand in this expression.
+
+Q.17)What is the result of the expression true && false || false && true? 
+Ans)To evaluate the expression `true && false || false && true`, we need to understand the operator precedence and how logical AND (`&&`) and logical OR (`||`) operators work in JavaScript.
+
+The expression `true && false || false && true` involves both `&&` (logical AND) and `||` (logical OR) operators. In JavaScript, the logical AND (`&&`) operator has higher precedence than the logical OR (`||`) operator.
+
+Let's break down the evaluation step by step:
+
+1. **Evaluate `true && false`:**
+   - The expression `true && false` evaluates to `false` because one of the operands (`false`) is `false`.
+
+2. **Evaluate `false && true`:**
+   - The expression `false && true` also evaluates to `false` because one of the operands (`false`) is `false`.
+
+3. **Evaluate the entire expression using `||` (logical OR):**
+   - Now we have `false || false`.
+   - The `||` operator returns `true` if at least one of the operands is `true`. In this case, both operands (`false`) are `false`.
+   - Therefore, `false || false` evaluates to `false`.
+
+Hence, the result of the expression `true && false || false && true` is `false`. This is because the logical AND (`&&`) operator evaluated to
+ `false`, and then the logical OR (`||`) operator also resulted in `false` based on the evaluated operands.
+
+Q.18)What is a Loop and Switch case in Javascript defined that?
+Ans)Loop:Loops are used in JavaScript to perform repeated tasks based on a condition. Conditions typically return true or false. A loop will continue
+running until the defined condition returns false.
+
+for Loop
+Syntax
+for (initialization; condition; finalExpression) {
+  // code
+}
+Switch:In programming, a switch statement is a control-flow statement that tests the value of an expression against multiple cases.
+
+This is the basic syntax for a switch statement:
+
+switch (expression) {
+  case 1:
+   //this code will execute if the case matches the expression
+    break;
+  case 2:
+   //this code will execute if the case matches the expression
+    break;
+  case 3:
+   //this code will execute if the case matches the expression
+    break;
+  default:
+    //this code will execute if none of the cases match the expression
+    break;
+}
+
+Q.19)What is a use of a Nan Function?
+Ans)NaN stands for "Not a Number" and is a value in JavaScript used to represent an undefined or unrepresentable value. NaN is the result of an operation that was supposed to return a number, but couldn't because of an error or undefined/empty value. For example, dividing zero by zero or attempting to parse a string that doesn't contain a valid number will result in NaN.
+        
+Use:  The JavaScript isNaN() Function is used to check whether a given value is an illegal number or not. It returns true if the value is a NaN else returns false. It is different from the Number.isNaN() Method.
+
+Q.20)What is the difference between && and || in javascript?
+Ans)JavaScript defines the two operators && and || which represent the logical AND and OR operations, respectively. Using only the two boolean values true and false, we can generate the following truth tables:
+
+                                                          // Logical AND operation                                                                //Logical OR operation
+
+                                               
+                                                       true && true; // true                                                                               true ||true;true
+                                                       true && false; // false                                                                              true || false;true
+                                                        false && true; // false                                                                             false ||true; true                                                                                 
+                                                        false && false; // false                                                                             false || false;false
+
+Q.21)What is the use of Void(0)?
+Ans)The void keyword in JavaScript, is used to evaluate an expression which does not return any value. The void operator is an unary operator that 
+        accepts the single operand, which may be of any type. The importance of the void keyword come into role when we just need to evaluate an 
+        expression instead of returning its value. It means, by using it, we can prevent the browser from displaying the result of the execution of the 
+         expression.
+
+Q.22)Cheak Number is Positive or Negative in javascript?
+Ans) we are using a switch statement to check a number’s sign (positive, negative, or zero) based on Math.sign() method, this method is used to know 
+        the sign of a number, indicating whether the number specified is negative or positive.
+
+Syntax:
+
+switch (expression) {
+    case value1:
+        statement1;
+        break;
+    case value2:
+        statement2;
+        break;
+    . . .
+    case valueN:
+        statementN;
+        break;
+    default:
+        statementDefault;
+}
+Example: In this example, we are using the above-explained approach
+
+
+function numberChecking(num) {
+    switch (Math.sign(num)) {
+        case 1:
+            console.log("The number is Positive");
+            break;
+        case -1:
+            console.log("The number is Negative");
+            break;
+        default:
+            console.log("The number is Zero");
+    }
+}
+ 
+numberChecking(12);
+// Output: Positive
+numberChecking(-1);
+// Output: Negative
+numberChecking(0);
+// Output: Zero
+Output
+The number is Positive
+The number is Negative
+The number is Zero
+
+Q.23)Find the character is vowel or not?
+Ans)Approaches to find if a character is a vowel or consonant
+        Using conditional Statements
+        Using JavaScript array and .include method
+        Using Regular expression
+Method 1: Using conditional statements
+In this method, we will use if-else conditional statements to check if the letter is a vowel or not and display the output result.
+
+Example: This example demonstrates the conditional statements for vowels and consonants.
+
+
+function checkChar(char){ 
+    ch  = char.toLowerCase();  
+    if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') 
+    return console.log("Given character is a Vowel"); 
+    return console.log("Given character is a Consonent"); 
+} 
+  
+  
+checkChar('G'); 
+checkChar('A')
+Output
+Given character is a Consonent
+Given character is a Vowel
+Method 2: Using JavaScript array and Array .includes() method
+In this method, we will use JavaScript array of vowels and use includes method to check if given character is present in the array then it is a vowel and consonant otherwise.
+
+Example: In this example, we will check if vowels array includes the input cahracter or not.
+
+
+function checkChar(char){ 
+    ch  = char.toLowerCase();  
+    const arr = ['a','e','i','o','u']  
+    if(arr.includes(ch)) 
+    return console.log("Given character is a Vowel"); 
+    return console.log("Given character is a Consonent"); 
+} 
+  
+checkChar('E'); 
+checkChar('J');
+Output
+Given character is a Vowel
+Given character is a Consonent
+Method 3: Using JavaScript regular expression
+In this method, we will create a regular expression for the vowels and test if the given input char satisfy the regex condition.
+
+Example: In this example, we will implement regex for the vowels and output the result.
+
+
+function checkChar(char){ 
+    ch  = char.toLowerCase();  
+    const regex = /^[aeiou]$/i; 
+    if(regex.test(ch)) 
+    return console.log("Given character is a Vowel"); 
+    return console.log("Given character is a Consonent"); 
+} 
+  
+  
+checkChar('I'); 
+checkChar('Z');
+Output
+Given character is a Vowel
+Given character is a Consonent
+
+Q.24)write to check whether number is positive,negative or zero?
+Ans) if a number is positive, negative, or zero, for numerous mathematical operations and conditional statements in JavaScript. It is critical to know if a given number is positive, negative, or zero. This article provides a straightforward approach in JavaScript that lets you determine whether a given number belongs to one of these groups.
+
+       Several methods can be used to Check if a number is Positive, Negative, or Zero.
+
+Table of Content
+
+.    Using Switch Statement:
+Approach 1: Using Switch Statement
+In this approach, we are using a switch statement to check a number’s sign (positive, negative, or zero) based on Math.sign() method, this method is used to know the sign of a number, indicating whether the number specified is negative or positive.
+
+Syntax:
+
+switch (expression) {
+    case value1:
+        statement1;
+        break;
+    case value2:
+        statement2;
+        break;
+    . . .
+    case valueN:
+        statementN;
+        break;
+    default:
+        statementDefault;
+}
+Example: In this example, we are using the above-explained approach
+
+
+function numberChecking(num) {
+    switch (Math.sign(num)) {
+        case 1:
+            console.log("The number is Positive");
+            break;
+        case -1:
+            console.log("The number is Negative");
+            break;
+        default:
+            console.log("The number is Zero");
+    }
+}
+ 
+numberChecking(12);
+// Output: Positive
+numberChecking(-1);
+// Output: Negative
+numberChecking(0);
+// Output: Zero
+Output
+The number is Positive
+The number is Negative
+The number is Zero
+
+Q.25)write to check whether number is even or odd usin Ternary opration in javascript?
+Ans) In the number system any natural number that can be expressed in the form of (2n + 1) is called an odd number and if the number can be expressed in the form of 
+          2n is called an even number.
+
+ Using Ternary Operator
+Ternary operator (?:) is a shorthand conditional operator that evaluates a condition and returns one of two expressions based on the result.
+
+Syntax:
+condition ? value if true : value if false
+Example: In this example, we are using the Ternary operator to find given number is even or odd.
+
+
+function checkOddOrEven(num) {
+    return num % 2 === 0 ? 'Even' : 'Odd';
+}
+ 
+console.log(checkOddOrEven(21));
+console.log(checkOddOrEven(12));
+Output
+Odd
+Even
+
+Q.1)what is javascripts?
+ans)JavaScript is a versatile and powerful programming language primarily used for creating interactive and dynamic content on websites
+
+Q.2)what is the use of an nan function?
+ans)The isNaN function in JavaScript is used to determine whether a value is NaN (Not-a-Number). NaN is a special value
+ in JavaScript that represents a value that is not a legal number.
+
+
+Syntax
+javascript
+Copy code
+isNaN(value)
+value: The value to be tested.
+How it Works
+The isNaN function converts the given value to a number, if necessary, and then determines whether the resulting value is NaN. 
+If the value is NaN, the function returns true; otherwise, it returns false.
+
+Examples
+
+Basic Usage:
+
+isNaN(123); // false, 123 is a number
+isNaN('123'); // false, '123' is converted to the number 123
+isNaN('Hello'); // true, 'Hello' cannot be converted to a number
+isNaN(NaN); // true, NaN is not a number
+isNaN(undefined); // true, undefined is not a number
+
+
+Special Cases:
+
+isNaN(true); // false, true is converted to 1
+isNaN(false); // false, false is converted to 0
+isNaN(null); // false, null is converted to 0
+
+
+Objects:
+
+isNaN({}); // true, an object cannot be converted to a number
+isNaN([]); // false, an empty array is converted to 0
+isNaN([1, 2, 3]); // true, a non-empty array cannot be converted to a number
+
+Q.3)What is negative Infinity?
+ans)In JavaScript, -Infinity (negative infinity) is a special numeric value that represents a value that is infinitely small. It is a property
+ of the global Number object and is used to represent values that are beyond the lower limit of the number range that JavaScript can represent.
+
+Q.4)Which company developed JavaScript?
+ans)JavaScript was developed by Netscape Communications Corporation, now known as Mozilla. The language was created by Brendan Eich,
+ who was working at Netscape at the time. JavaScript was first introduced in December 1995 as part of Netscape Navigator 2.0, which was one
+ of the early web browsers
+
+Q.5) What are undeclared and undefined variables?
+ans)Undeclared Variables
+An undeclared variable is a variable that has not been declared using var, let, or const before it is used in your code. Using undeclared
+ variables can lead to unexpected results and is generally considered bad practice.
+
+       Undefined Variables
+An undefined variable is a variable that has been declared but has not been assigned a value. In JavaScript, variables that are declared but
+not initialized are automatically assigned the value undefined.
+
+Q.6)Write the code for adding new elements dynamically?
+ans)Adding new elements dynamically to the DOM (Document Object Model) in JavaScript can be achieved using several methods. Below is an example that demonstrates how to create new elements and add them to the DOM:
+
+Example: Adding New Elements Dynamically
+
+html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Element Addition</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #f2f2f2;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamic Element Addition</h1>
+    <button id="addButton">Add Item</button>
+    <ul id="itemList">
+    </ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+javascript
+
+document.getElementById('addButton').addEventListener('click', function() {
+    // Get the ul element
+    const ul = document.getElementById('itemList');
+
+    // Create a new li element
+    const li = document.createElement('li');
+
+    // Create a text node with some content
+    const text = document.createTextNode('New Item');
+
+    // Append the text node to the li element
+    li.appendChild(text);
+
+    // Append the li element to the ul
+    ul.appendChild(li);
+});
+
+Q.7)What is the difference between ViewState and SessionState?
+ans)ViewState and SessionState are both state management techniques in ASP.NET used to preserve data across postbacks. However, they have
+ different scopes, storage mechanisms, and use cases:
+
+ViewState:
+1)Scope: ViewState is specific to a single page. It is used to maintain the state of the controls between postbacks on the same page.
+2)Storage Mechanism: ViewState data is stored in a hidden field on the page in the form of a base64-encoded string. This hidden field is part of the 
+   page's HTML and is sent to and from the server with each postback.
+3)Lifetime: ViewState data is available for the duration of the page's lifecycle, from when the page is loaded to when the page is unloaded.
+4)Use Case: Ideal for persisting small amounts of data that need to be retained between postbacks on the same page. For example, it is commonly used
+   to preserve the state of user inputs in form fields, control properties, and other UI-related data.
+5)Security: ViewState can be encrypted for security purposes, but because it is stored on the client side, it can still be a potential target for tampering.
+
+SessionState:
+1)Scope: SessionState is user-specific and can span multiple pages. It is used to store data that needs to be accessible across different pages within the
+   same user session.
+2)Storage Mechanism: SessionState data is stored on the server. By default, it is stored in memory, but it can also be configured to use other storage
+   mechanisms such as SQL Server, a State Server, or a custom provider.
+3)Lifetime: SessionState data is available for the duration of the user's session, which by default lasts 20 minutes of inactivity but can be configured to
+   last longer.
+4)Use Case: Suitable for storing larger amounts of data that need to be shared across multiple pages, such as user authentication information, shopping
+   cart contents, user preferences, and other session-specific data.
+5)Security: Since SessionState data is stored on the server, it is generally more secure than ViewState. However, securing the data also depends on the 
+implementation and configuration of the session state storage.
+
+Q.8)what is === operator?
+ans)The === operator is known as the strict equality operator in JavaScript. It is used to compare two values for equality, ensuring both the value
+       and the type are the same. This is in contrast to the == operator, which compares values for equality after performing type coercion if necessary.
+
+Key Characteristics of ===:
+
+1)Type Comparison: === checks if the operands are of the same type.
+2)Value Comparison: If the types match, === then checks if the values are equal.
+3)No Type Coercion: Unlike ==, === does not perform type coercion, meaning it does not convert one operand to the type of the other before 
+   comparing.
+
+Q.9)How can the style/class of an element be changed?
+ans)In JavaScript, you can change the style or class of an HTML element using various methods. Here are some common approaches:
+
+     Changing the Style of an Element
+Using the style Property:
+
+Directly modify the inline styles of an element using the style property.
+
+javascript:
+
+// Get the element by its ID
+var element = document.getElementById('myElement');
+
+// Change the style properties
+element.style.color = 'blue';
+element.style.backgroundColor = 'yellow';
+element.style.fontSize = '20px';
+Using CSS Classes:
+
+Add, remove, or toggle CSS classes using methods from the classList property.
+
+javascript:
+
+// Get the element by its ID
+var element = document.getElementById('myElement');
+
+// Add a class
+element.classList.add('newClass');
+
+// Remove a class
+element.classList.remove('oldClass');
+
+// Toggle a class (add if not present, remove if present)
+element.classList.toggle('toggleClass');
+
+Q.10)How to read and write a file using JavaScript?
+ans)Client-Side (Browser)
+        In a web browser, direct file system access is restricted for security reasons. However, you can use the File API to read files and the Blob and
+        File APIs along with a download link to write files.
+
+Reading a File
+
+To read a file from the user's local system, you typically use an <input> element of type file.
+
+html
+
+<input type="file" id="fileInput">
+<script>
+document.getElementById('fileInput').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            console.log(e.target.result);
+        };
+        reader.readAsText(file);
+    }
+});
+</script>
+Writing to a File
+To save a file, you can create a Blob and trigger a download.
+
+html
+
+<button id="saveButton">Save File</button>
+<script>
+document.getElementById('saveButton').addEventListener('click', function() {
+    const data = 'This is the data to save to the file.';
+    const blob = new Blob([data], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'example.txt';
+    document.body.appendChild(a);
+    a.click();
+    
+    window.URL.revokeObjectURL(url); 
+   document.body.removeChild(a);
+
+});
+</script>
+
+
+Q.11)What are all the looping structures in JavaScript?
+ans)JavaScript provides several looping structures to execute a block of code multiple times. Here are the main looping structures available in 
+       JavaScript:
+
+1. for Loop
+The for loop is the most commonly used loop. It is typically used when you know how many times you want to execute a statement or a block of statements.
+
+Syntax:
+
+javascript
+
+for (initialization; condition; increment/decrement) {
+    // code block to be executed
+}
+Example:
+
+javascript
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+2. while Loop
+The while loop executes a block of code as long as the specified condition is true.
+
+Syntax:
+
+javascript
+
+while (condition) {
+    // code block to be executed
+}
+Example:
+
+javascript
+let i = 0;
+while (i < 5) {
+    console.log(i);
+    i++;
+}
+3. do...while Loop
+The do...while loop is similar to the while loop, but it checks the condition after executing the block of code. This guarantees that the block of code is executed at least once.
+
+Syntax:
+
+javascript
+
+do {
+    // code block to be executed
+} while (condition);
+Example:
+
+javascript
+let i = 0;
+do {
+    console.log(i);
+    i++;
+} while (i < 5);
+4. for...in Loop
+The for...in loop iterates over the enumerable properties of an object.
+
+Syntax:
+
+javascript
+
+for (variable in object) {
+    // code block to be executed
+}
+Example:
+
+javascript
+const person = { fname: "John", lname: "Doe", age: 25 };
+
+for (let key in person) {
+    console.log(key + ": " + person[key]);
+}
+5. for...of Loop
+The for...of loop iterates over iterable objects (including Array, Map, Set, String, TypedArray, arguments object, etc.).
+
+Syntax:
+
+javascript
+
+for (variable of iterable) {
+    // code block to be executed
+}
+Example:
+
+javascript
+const arr = [10, 20, 30];
+
+for (let value of arr) {
+    console.log(value);
+}
+6. forEach Method
+The forEach method is an array method that executes a provided function once for each array element.
+
+Syntax:
+
+javascript
+
+array.forEach(function(currentValue, index, arr), thisValue)
+Example:
+
+javascript
+const array = [1, 2, 3, 4, 5];
+
+array.forEach(function(element) {
+    console.log(element);
+});
+
+
+Q.12)How can you convert the string of any base to an integer in JavaScript?
+ans)n JavaScript, you can convert a string of any base to an integer using the parseInt function. The parseInt function takes two arguments:
+ the string to be converted and the base (radix) of the number system used.
+
+Here is an example of how to use parseInt:
+
+javascript
+
+// Binary (base 2) to integer
+let binaryString = "1101";
+let binaryNumber = parseInt(binaryString, 2);
+console.log(binaryNumber); // Output: 13
+
+// Octal (base 8) to integer
+let octalString = "17";
+let octalNumber = parseInt(octalString, 8);
+console.log(octalNumber); // Output: 15
+
+// Decimal (base 10) to integer
+let decimalString = "123";
+let decimalNumber = parseInt(decimalString, 10);
+console.log(decimalNumber); // Output: 123
+
+// Hexadecimal (base 16) to integer
+let hexString = "1A";
+let hexNumber = parseInt(hexString, 16);
+console.log(hexNumber); // Output: 26
+In each of these examples, parseInt converts the string representation of a number in a specified base to an integer in base 10. The second argument 
+to parseInt specifies the base of the input string.
+
+Q.13)What is the function of the delete operator?
+ans)The delete operator in JavaScript is used to remove a property from an object. When a property is deleted, it is removed from the object and no
+       longer exists. The delete operator returns true if the property was successfully deleted, and false otherwise.
+
+Q,14)What are all the types of Pop up boxes available in JavaScript?
+ans)In JavaScript, there are three main types of pop-up boxes available:
+
+1)Alert Box: Used to display a simple message to the user. It only has an OK button.
+
+javascript
+
+alert("This is an alert box!");
+2)Confirm Box: Used to display a message to the user with OK and Cancel buttons. It returns true if the user clicks OK and false if the user clicks Cancel.
+
+javascript
+
+let userConfirmed = confirm("Do you want to proceed?");
+if (userConfirmed) {
+    console.log("User clicked OK");
+} else {
+    console.log("User clicked Cancel");
+}
+3)Prompt Box: Used to display a message to the user and ask for some input. It has a text field along with OK and Cancel buttons. It returns the input
+ value if the user clicks OK, and null if the user clicks Cancel.
+
+javascript
+
+let userInput = prompt("Please enter your name:");
+if (userInput !== null) {
+    console.log("User entered: " + userInput);
+} else {
+    console.log("User cancelled the prompt");
+}
+These pop-up boxes are used for simple interactions with the user, such as displaying messages, confirming actions, or asking for input. They are
+ blocking, meaning they will halt the execution of code until the user has responded to the pop-up.
+
+
+Q.15)What is the use of Void (0)?
+ans)n JavaScript, void is an operator used to evaluate an expression and return undefined. The expression void(0) is commonly used because it
+ evaluates to undefined and is often used to prevent the default action of an anchor tag (<a>) or to intentionally return undefined.
+
+Here are some common uses of void(0):
+
+1)Prevent Default Action in Links: When you want to use a link (<a> tag) for its JavaScript functionality without navigating to a new page or reloading 
+the current page, you can use void(0) to prevent the default behavior.
+
+2)As a Placeholder for JavaScript Links: Sometimes, void(0) is used as a placeholder in href attributes for links that are intended to be handled entirely
+ by JavaScript.
+
+3)Returning Undefined Intentionally: In some cases, you might want to explicitly return undefined from a function or an expression. Using void(0)
+ can be a concise way to achieve this.
+
+Q.16)How can a page be forced to load another page in JavaScript?
+
+ans)In JavaScript, you can force a page to load another page using the window.location object. There are a few methods available within this object
+
+ to achieve this:
+
+Using window.location.href: This method sets the URL of the current document, which will cause the browser to load the new page.
+
+javascript
+
+window.location.href = "https://www.example.com";
+Using window.location.assign(): This method is similar to setting window.location.href and also loads a new document.
+
+javascript
+
+window.location.assign("https://www.example.com");
+Using window.location.replace(): This method replaces the current document with the new one. The difference from the other methods is that 
+replace() does not create a new entry in the browser's history, so the user cannot use the back button to navigate to the original document.
+
+javascript
+
+window.location.replace("https://www.example.com");
+
+Q.17)What are the disadvantages of using innerHTML in JavaScript?
+ans)1)DOM APIs: Use methods like createElement, appendChild, removeChild, setAttribute, etc., to manipulate elements directly without affecting their
+ content structure.
+
+2)TextContent and InnerText: Use textContent or innerText to set or get text content of elements, which avoids the risks associated with HTML parsing
+ and rendering.
+
+3)Template Engines or Libraries: Utilize template engines (like Handlebars, Mustache) or modern JavaScript frameworks/libraries (such as React, Vue.js) 
+that offer declarative and efficient ways to update the DOM, often using virtual DOM reconciliation for optimal performance and security.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                 
